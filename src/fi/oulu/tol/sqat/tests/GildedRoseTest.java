@@ -341,4 +341,20 @@ public class GildedRoseTest {
 		
 		assertEquals("Failed Sulfuras sellin", -50, sellin);
 	}
+	
+	@Test
+	public void test_updateQuality_missLoopEntirely() {
+		
+		GildedRose inn = new GildedRose();		
+		inn.setItem(new Item("Elixir of the Mongoose", 5, 7));		
+		List<Item> items = inn.getItems();		
+		
+		// MISS LOOP
+		//inn.oneDay();				
+		
+		int quality = items.get(0).getQuality();
+		
+		assertEquals("Failed Elixir quality", 7, quality);
+	}
+	
 }
