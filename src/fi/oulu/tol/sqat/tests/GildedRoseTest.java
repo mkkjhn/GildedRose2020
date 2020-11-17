@@ -208,7 +208,7 @@ public class GildedRoseTest {
 		
 		int quality = items.get(0).getQuality();
 		
-		// should be 50, is actually 52
+		// should be 50, is actually 52 (SHOULD FAIL)
 		assertEquals("Failed Brie quality", 50, quality);
 	}
 	
